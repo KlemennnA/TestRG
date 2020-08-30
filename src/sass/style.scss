@@ -4,6 +4,9 @@ $theme-colors: (
 );
 
 @import "node_modules/bootstrap/scss/bootstrap";
+@import "./base";
+@import "./mixins";
+@import "./variables";
 
 body {
     padding-top:56px;

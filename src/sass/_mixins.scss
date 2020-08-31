@@ -1,0 +1,14 @@
+@mixin resCenteredBackground {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin nav-link-button-img ($bgImage) {
+    width: 33%;
+    height: 33%;
+    max-width: 41px;
+    max-height: 41px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: $bgImage;
+}

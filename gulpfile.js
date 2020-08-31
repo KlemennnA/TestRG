@@ -54,7 +54,10 @@ function img() {
         .pipe(gulpIf(isProd, imagemin()))
         .pipe(gulp.dest('html/img/'));
 }
-
+function fonts(){
+    return gulp.src('src/fonts/*.*')
+        .pipe(gulp.dest('html/css/fonts/'));
+}
 function serve() {
     browserSync.init({
         open: true,
@@ -82,9 +85,10 @@ function del() {
         .pipe(clean());
 }
 
+exports.fonts = fonts;
 exports.css = css;
 exports.html = html;
 exports.js = js;
 exports.del = del;
-exports.serve = gulp.parallel(html, css, js, img, watchFiles, serve);
-exports.default = gulp.series(del, html, css, js, img);
+exports.serve = gulp.parallel(html, css, js, img, fonts, watchFiles, serve);
+exports.default = gulp.series(del, html, css, js, img, fonts);

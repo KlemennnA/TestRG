@@ -1,0 +1,122 @@
+@import "./variables";
+@import "./mixins";
+
+@font-face {
+    font-family: HeadingFont;
+    src:url('fonts/Kanit-Bold.eot');
+    src:url('fonts/Kanit-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Kanit-Bold.woff2') format('woff2'), 
+        url('fonts/Kanit-Bold.woff') format('woff'),
+        url('fonts/Kanit-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: TextFont;
+    src:url('fonts/Poppins-Regular.eot');
+    src:url('fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Poppins-Regular.woff2') format('woff2'), 
+        url('fonts/Poppins-Regular.woff') format('woff'),
+        url('fonts/Poppins-Regular.ttf') format('truetype');
+}
+.headingFont{
+    font-family: HeadingFont;
+}
+.textFont{
+    font-family: TextFont;
+}
+.companyLogo-home{
+    height: auto;
+    width: 2.5rem;
+}
+.navbar{
+    padding: 0 0.5rem 0 0.5rem;
+    border-bottom: none !important;
+    background-color: $primaryColor;
+}
+.navbar-brand{
+    padding: 0 0 0 0;
+    margin-left: 1rem;
+}
+.nav-link{
+    font-family: HeadingFont;
+    &::before{
+        content: "";
+        border-left: #CCC 2px solid;
+        margin-right: 1rem;
+    }
+}
+.headerBackground {
+    @include resCenteredBackground();
+    background-image: $imgHeader;
+    min-height: 42.8vw;
+    background-color: $primary;
+}
+.companyLogo {
+    @include resCenteredBackground();
+    background-image: $imgLogo;
+    background-size: contain;
+    width: 20vw;
+    height: 20vw;
+}
+.bigButtonsNavbar{
+    margin-top: -5vw;
+    font-family: TextFont;
+    div{
+        display: block;
+        width: 10vw;
+        height: 10vw;
+        text-align: center;
+        background-color: $primary;
+        color: $secondaryColor;
+        :hover{
+            background-color: $highlightColor;
+            cursor: pointer;
+        }
+    }
+}
+.bigButton{
+    height: 100%;
+    width: 100%;
+    span{
+        font-size: 0.75rem;
+        padding-top: 0.25rem;
+    }
+}
+.hiddenBigButtonLinks{
+    display: none !important;
+}
+@include media-breakpoint-down(xs) {
+    .bigButtonsNavbar {
+        display: none !important;
+    }
+    .hiddenBigButtonLinks{
+        display: block !important;
+    }
+}
+.nav-link-button-text{
+    font-family: HeadingFont;
+    font-size: 0.75em;
+    text-align: center;
+    padding-top: 0.5em;
+    color: $secondaryColor;
+}
+.img-train{
+    @include nav-link-button-img($imgTrain);
+}
+.img-ship{
+    @include nav-link-button-img($imgShip);
+}
+.img-truck{
+    @include nav-link-button-img($imgTruck);
+}
+.img-plane{
+    @include nav-link-button-img($imgPlane);
+}
+.img-crane{
+    @include nav-link-button-img($imgCrane);
+}
+.img-story{
+    @include nav-link-button-img($imgStory);
+}
+.img-warehouse{
+    @include nav-link-button-img($imgWarehouse);
+}

@@ -1,5 +1,6 @@
 $theme-colors: (
-    "primary": #ff3a52,
+    "primary": #04315b,
+    "secondary": #ffffff,
     "dark": #000000
 );
 
@@ -8,9 +9,6 @@ $theme-colors: (
 @import "./mixins";
 @import "./variables";
 
-body {
-    padding-top:56px;
-}
 .footer {
     margin-top:3rem;
 }

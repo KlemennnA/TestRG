@@ -8,6 +8,7 @@ $theme-colors: (
 @import "./base";
 @import "./mixins";
 @import "./variables";
+@import "./customs";
 
 .footer {
     margin-top:3rem;

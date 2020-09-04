@@ -43,3 +43,24 @@
 .img-dropdown-warehouse{
     @include dropdownButton-img($imgWarehouse);
 }
+.partnerLogo{
+    @include partnerLogo-img($imgPartnerLogo);
+}
+.socialFB{
+    @include socialNetworkButton($imgFB);
+}
+.socialInsta{
+    @include socialNetworkButton($imgInsta);
+}
+.socialYT{
+    @include socialNetworkButton($imgYT);
+}
+.contactLoc{
+    @include contactSymbol($imgLocMark);
+}
+.contactPhone{
+    @include contactSymbol($imgPhone);
+}
+.contactMail{
+    @include contactSymbol($imgMail);
+}

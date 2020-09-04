@@ -11,7 +11,7 @@
         <title>TestRG</title>
     </head>
     
-    <body>
+    <body onresize="positionAdvantagesGroup()" onload="positionAdvantagesGroup()">
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
 <a class="navbar-brand" href="./index.html"><img class="companyLogo-home" src="../img/Layer 31.png"/></a>
 
@@ -61,7 +61,7 @@
         <div class="container-fluid d-flex justify-content-center align-items-center headerBackground">
             <div class="companyLogo"></div>
         </div>
-        <div class="container-fluid d-flex flex-row justify-content-center bigButtonsNavbar">
+        <div class="container-fluid d-flex flex-row justify-content-center text-secondary bigButtonsNavbar">
             <div class="border-left-right shadow-lg"><a href="#">
         <span class="d-flex flex-column justify-content-center align-items-center bigButton">
             <span class="img-train"></span>
@@ -114,44 +114,58 @@
         </div>
         <div class="container d-flex flex-column justify-content-center bg-white containerCustom">
              <h1>Lorem ipsum dolor sit amet</h1>
-
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione optio
                 voluptatum corporis consectetur deserunt maiores molestiae totam autem
                 consequuntur tempora!</p>
         </div>
         <div class="container-fluid centerContentBackground">
             <div class="container containerCustom">
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="row centerRowCustom">
+                    <div class="col-md-4 align-self-center">
                          <h2>Vprašajte nas</h2>
-
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum velit
+                        <p class="p-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum velit
                             ut ad cumque impedit iusto, dolorum recusandae reiciendis labore quia veniam,
                             esse saepe aspernatur repudiandae alias similique. Pariatur, minima ipsa.</p>
                     </div>
-                    <div class="col-md-8 d-flex flex-row justify-content-around align-items-end">
-                        <div class="container-fluid height100p">
-                            <div class="row d-flex flex-row justify-content-around align-items-end height100p">
-                                <div class="col-5 happyGuy"></div>
-                                <div class="col-7 mt-5">
-                                    <nav>
-                                        <div class="nav nav-tabs" id="nav-tab" role="tablist"> <a class="nav-item nav-link active" id="nav-ponudba-tab" data-toggle="tab"
-                                            href="#nav-ponudba" role="tab" aria-controls="nav-ponudba" aria-selected="true">PONUDBA</a>
-
-                                            <a
-                                            class="nav-item nav-link" id="nav-sledite-tab" data-toggle="tab" href="#nav-sledite"
-                                            role="tab" aria-controls="nav-sledite" aria-selected="false">SLEDITE</a>
-                                        </div>
-                                    </nav>
-                                    <div class="tab-content" id="nav-tabContent">
-                                        <div class="tab-pane fade show active" id="nav-ponudba" role="tabpanel"
-                                        aria-labelledby="nav-ponudba-tab">
-                                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, assumenda!</p>
-                                        </div>
-                                        <div class="tab-pane fade" id="nav-sledite" role="tabpanel" aria-labelledby="nav-sledite-tab">
-                                            <p>>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
-                                                odit.</p>
-                                        </div>
+                    <div class="col-md-8">
+                        <div class="row height100p">
+                            <div class="col-ms-6 align-self-end z-index-1">
+                                <img class="happyGuyImg" src="./img/Untitled-2.png" />
+                            </div>
+                            <div class="col-ms-6 align-self-end z-index-3">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist"> <a class="nav-item nav-link active" id="nav-ponudba-tab" data-toggle="tab"
+                                        href="#nav-ponudba" role="tab" aria-controls="nav-ponudba" aria-selected="true">PONUDBA</a>
+                                        <a
+                                        class="nav-item nav-link" id="nav-sledite-tab" data-toggle="tab" href="#nav-sledite"
+                                        role="tab" aria-controls="nav-sledite" aria-selected="false">SLEDITE</a>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-ponudba" role="tabpanel"
+                                    aria-labelledby="nav-ponudba-tab">
+                                        <p class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem doloribus
+                                            officia repudiandae, numquam quia ratione eos amet dolorem quos animi.</p>
+                                        <form
+                                        class="pl-3 pr-3 pb-2">
+                                            <div class="form-group">
+                                                <label for="startPoint" class="float-left">Od:</label>
+                                                <input type="email" class="form-control" id="startPoint" aria-describedby="emailHelp"
+                                                placeholder="npr. Ljubljana">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="endPoint" class="float-left">Do:</label>
+                                                <input type="password" class="form-control" id="endPoint" placeholder="npr. Koper">
+                                            </div>
+                                            <button type="button" class="btn btn-highlight" onclick="pridobiPonudbo()">PRIDOBITE PONUDBO</button>
+                                            </form>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-sledite" role="tabpanel" aria-labelledby="nav-sledite-tab">
+                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
+                                            odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
+                                            odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
+                                            odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
+                                            odit.</p>
                                     </div>
                                 </div>
                             </div>
@@ -160,67 +174,178 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="container-fluid centerContentBackground">
-<div class="container containerCustom">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>Vprašajte nas</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum velit ut ad cumque impedit iusto, dolorum recusandae reiciendis labore quia veniam, esse saepe aspernatur repudiandae alias similique. Pariatur, minima ipsa.</p>
-    </div>
-    <div class="col-sm-8">
-        <div class="container-fluid">
-          <div class="row">
-          <div class="col-md-5 d-none d-md-block">
-            <img class="happyGuy" src="./img/Layer 9.png">
-          </div>
+        <div class="container-fluid pt-3 d-flex flex-column justify-content-end bottomContentCustom z-index-2">
+            <div class="container d-flex flex-column justify-content-center bg-transparent text-secondary containerCustom">
+                 <h1>Lorem ipsum dolor sit amet</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illum
+                    aperiam natus vel recusandae ad commodi laboriosam eligendi minima aut.</p>
+            </div>
+            <div id="Advantages" class="container-fluid p-0 d-md-flex align-items-end d-none"
+            style="position: relative;margin: 0 0 0 0;">
+                <svg class="svgEllipseContainer z-index-1" viewbox="0 0 303 100">
+                    <path id="bigEllipsePath" class="EllipsePath" d="M-0.07,86.7C23.31,69.89 54.33,54.01 89.72,41.835C175.21,12.41 253.86,15.72 265.39,49.234C270.44,63.9 261.78,81.93 243.28,100.03"
+                    />
+                    <path class="EllipsePath-small" d="M59.25,100.06C69.33,91.57 84.32,83.32 101.92,77.26C137.47,65.03 170.18,66.4 174.98,80.34C176.95,86.08 173.89,93.05 167.12,100.12"
+                    />
+                </svg>
+                <div id="1" class="advantage-container">
+                    <div class="container text-right text-md-left text-secondary advantages-arrow-right">
+                        <img class="arrow-img-left z-index-1" src="../img/Layer 14 copy 2.png"></img>
+                        <div class="advantage-container-text z-index-2">
+                             <h3>01</h3>
+                             <h4>VEČ KOT 50 LET TRADICIJE</h4>
+                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="2" class="advantage-container">
+                    <div class="container text-left text-md-left text-secondary advantages-arrow-left">
+                        <img class="arrow-img-left z-index-1" src="../img/Layer 14 copy 2.png"></img>
+                        <div class="advantage-container-text z-index-2">
+                             <h3>02</h3>
+                             <h4>HITRO IN ZANESLJIVO</h4>
+                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="3" class="advantage-container">
+                    <div class="container text-right text-md-right text-secondary advantages-arrow-right">
+                        <img class="arrow-img-right z-index-1" src="../img/Layer 14 copy 2.png"></img>
+                        <div class="advantage-container-text-right z-index-2">
+                             <h3>03</h3>
+                             <h4>PRILAGOJENE REŠITVE</h4>
+                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="4" class="advantage-container">
+                    <div class="container text-left text-md-right text-secondary advantages-arrow-left">
+                        <img class="arrow-img-right z-index-1" src="../img/Layer 14 copy 2.png"></img>
+                        <div class="advantage-container-text-right z-index-2">
+                             <h3>04</h3>
+                             <h4>LOGISTIKA A-Ž</h4>
+                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="img-companyLogoCenter" src="../img/Layer 31.png" alt="Company Logo"
+                />
+            </div>
+            <div class="container-fluid">
+                <div class="container d-flex flex-column d-md-none align-items-center justify-content-top">
+                    <div class="container text-right text-md-left text-secondary advantages-arrow-right">
+                        <img class="arrow-img-left z-index-1" src="../img/Layer 14 copy 2.png"></img>
+                        <div class="advantage-container-text z-index-2">
+                             <h3>01</h3>
+                             <h4>VEČ KOT 50 LET TRADICIJE</h4>
+                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                        </div>
+                    </div>
+                    <div class="container text-left text-md-left text-secondary advantages-arrow-left">
+                        <img class="arrow-img-left z-index-1" src="../img/Layer 14 copy 2.png"></img>
+                        <div class="advantage-container-text z-index-2">
+                             <h3>02</h3>
+                             <h4>HITRO IN ZANESLJIVO</h4>
+                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                        </div>
+                    </div>
+                    <div class="container text-right text-md-right text-secondary advantages-arrow-right">
+                        <img class="arrow-img-right z-index-1" src="../img/Layer 14 copy 2.png"></img>
+                        <div class="advantage-container-text-right z-index-2">
+                             <h3>03</h3>
+                             <h4>PRILAGOJENE REŠITVE</h4>
+                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                        </div>
+                    </div>
+                    <div class="container text-left text-md-right text-secondary advantages-arrow-left">
+                        <img class="arrow-img-right z-index-1" src="../img/Layer 14 copy 2.png"></img>
+                        <div class="advantage-container-text-right z-index-2">
+                             <h3>04</h3>
+                             <h4>LOGISTIKA A-Ž</h4>
+                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid d-flex flex-column align-items-center text-center pt-3 pb-3 bg-partners">
+            <div class="container-fluid d-flex flex-column justify-content-center bg-transparent text-primary">
+                 <h2>POSLOVNA ODLIČNOST</h2>
+                <div class="container bg-transparent containerCustom"> <span class="container col-2 ml-1 mr-1 partnerLogo"></span> <span class="container col-2 ml-1 mr-1 partnerLogo"></span>
+                    <span
+                    class="container col-2 ml-1 mr-1 partnerLogo"></span> <span class="container col-2 ml-1 mr-1 partnerLogo"></span>
+                        <span
+                        class="container col-2 ml-1 mr-1 partnerLogo"></span>
+                </div>
+            </div>
+        </div>
+        <div id="GoogleMap" class="container-fluid googleMap"></div>
+        </div>
+        <footer class="footer container-fluid bg-primary">
+            <div class="row pt-2 align-items-center justify-content-around">
+                <div class="col-xs-3 py-5 pl-1 pr-3 mx-3">
+                    <div class="row">
+                        <img class="companyLogoCenter" src="../img/Layer 31.png" alt="Company Logo"
+                        />
+                    </div>
+                    <div class="row mt-1 justify-content-center"> <span class="socialFB ml-1 mr-1 mb-1"></span>
+ <span class="socialInsta ml-1 mr-1 mb-1"></span>
 
-          <div class="col-md-7 mt-5">
-            <nav>
-              <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-ponudba-tab" data-toggle="tab" href="#nav-ponudba" role="tab" aria-controls="nav-ponudba" aria-selected="true">PONUDBA</a>
-                <a class="nav-item nav-link" id="nav-sledite-tab" data-toggle="tab" href="#nav-sledite" role="tab" aria-controls="nav-sledite" aria-selected="false">SLEDITE</a>
-              </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-ponudba" role="tabpanel" aria-labelledby="nav-ponudba-tab">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, assumenda!</div>
-              <div class="tab-pane fade" id="nav-sledite" role="tabpanel" aria-labelledby="nav-sledite-tab">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, odit.</div>
-            </div>
-          </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-</div>
--->
-        <div class="jumbotron bg-white text-center justify-content-center align-items-center mb-0">
-            <div class="container">
-                 <h1 class="display-3">Boilerplate Bootstrap 4+  with Gulp 4 </h1>
+                        <span
+                        class="socialYT ml-1 mr-1 mb-1"></span>
+                    </div>
+                </div>
+                <div class="col-xs-5 pl-3 pr-3">
+                    <row class="text-secondary">
+                         <h6 class="footer-h">NAŠE STORITVE</h6>
 
-                <p class="lead">Basic is a Bootstrap 4+ boilerplate with Gulp4, cross-env, Sass, sourcemaps,
-                    concat, CSS & HTML minification, uglify, image optimization, template partials,
-                    BrowserSync.</p>
-                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
-                </p>
+                        <ul class="list-unstyled card-columns-services">
+                            <li> <a href="#">Železna logistika</a>
+
+                            </li>
+                            <li> <a href="#">Pomorska logistika</a>
+
+                            </li>
+                            <li> <a href="#">Cestna logistika</a>
+
+                            </li>
+                            <li> <a href="#">Letalska logistika</a>
+
+                            </li>
+                            <li> <a href="#">Blagovne skupine</a>
+
+                            </li>
+                            <li> <a href="#">Administrativne logistike</a>
+
+                            </li>
+                            <li> <a href="#">Skladiščenje</a>
+
+                            </li>
+                        </ul>
+                    </row>
+                </div>
+                <div class="col-xs-4 pl-1 pr-1">
+                    <row class="text-secondary">
+                         <h6 class="footer-h text-left text-md-center text-lg-left">KONTAKT</h6>
+
+                        <ul class="list-unstyled card-columns-contacts">
+                            <li> <a class="contactLoc" href="#">Šmartinska 130,<br>SI-1000 Ljubljana</a>
+
+                            </li>
+                            <li> <a class="contactPhone" href="#">+386 1 350 71 60</a>
+
+                            </li>
+                            <li> <a class="contactMail" href="#">info@companymail.si</a>
+
+                            </li>
+                        </ul>
+                    </row>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579032365451-d20e00c0ed23?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579032365437-9f9d275b0db0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid" src="https://images.unsplash.com/photo-1579033060982-1bb5b083f4fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                </div>
-            </div>
-        </div>
-        <footer class="footer container text-center">
-            <p>&copy; Bootstrap Basic Starter with Gulp</p>
         </footer>
         <script src="js/all.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAuU5F1qHZxGwmR3qy8EE30R6lHaC5zD4&callback=showGoogleMap"
+        type="text/javascript"></script>
     </body>
 
 </html>

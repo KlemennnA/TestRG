@@ -11,7 +11,7 @@
         <title>TestRG</title>
     </head>
     
-    <body>
+    <body onresize="positionAdvantagesGroup()" onload="positionAdvantagesGroup()">
         <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
 <a class="navbar-brand" href="./index.html"><img class="companyLogo-home" src="../img/Layer 31.png"/></a>
 
@@ -61,7 +61,7 @@
         <div class="container-fluid d-flex justify-content-center align-items-center headerBackground">
             <div class="companyLogo"></div>
         </div>
-        <div class="container-fluid d-flex flex-row justify-content-center bigButtonsNavbar">
+        <div class="container-fluid d-flex flex-row justify-content-center text-secondary bigButtonsNavbar">
             <div class="border-left-right shadow-lg"><a href="#">
         <span class="d-flex flex-column justify-content-center align-items-center bigButton">
             <span class="img-train"></span>
@@ -132,10 +132,71 @@
                 </div>
             </div>
         </div>
-        <footer class="footer container text-center">
-            <p>&copy; Bootstrap Basic Starter with Gulp</p>
+        <footer class="footer container-fluid bg-primary">
+            <div class="row pt-2 align-items-center justify-content-around">
+                <div class="col-xs-3 py-5 pl-1 pr-3 mx-3">
+                    <div class="row">
+                        <img class="companyLogoCenter" src="../img/Layer 31.png" alt="Company Logo"
+                        />
+                    </div>
+                    <div class="row mt-1 justify-content-center"> <span class="socialFB ml-1 mr-1 mb-1"></span>
+ <span class="socialInsta ml-1 mr-1 mb-1"></span>
+
+                        <span
+                        class="socialYT ml-1 mr-1 mb-1"></span>
+                    </div>
+                </div>
+                <div class="col-xs-5 pl-3 pr-3">
+                    <row class="text-secondary">
+                         <h6 class="footer-h">NAŠE STORITVE</h6>
+
+                        <ul class="list-unstyled card-columns-services">
+                            <li> <a href="#">Železna logistika</a>
+
+                            </li>
+                            <li> <a href="#">Pomorska logistika</a>
+
+                            </li>
+                            <li> <a href="#">Cestna logistika</a>
+
+                            </li>
+                            <li> <a href="#">Letalska logistika</a>
+
+                            </li>
+                            <li> <a href="#">Blagovne skupine</a>
+
+                            </li>
+                            <li> <a href="#">Administrativne logistike</a>
+
+                            </li>
+                            <li> <a href="#">Skladiščenje</a>
+
+                            </li>
+                        </ul>
+                    </row>
+                </div>
+                <div class="col-xs-4 pl-1 pr-1">
+                    <row class="text-secondary">
+                         <h6 class="footer-h text-left text-md-center text-lg-left">KONTAKT</h6>
+
+                        <ul class="list-unstyled card-columns-contacts">
+                            <li> <a class="contactLoc" href="#">Šmartinska 130,<br>SI-1000 Ljubljana</a>
+
+                            </li>
+                            <li> <a class="contactPhone" href="#">+386 1 350 71 60</a>
+
+                            </li>
+                            <li> <a class="contactMail" href="#">info@companymail.si</a>
+
+                            </li>
+                        </ul>
+                    </row>
+                </div>
+            </div>
         </footer>
         <script src="js/all.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBAuU5F1qHZxGwmR3qy8EE30R6lHaC5zD4&callback=showGoogleMap"
+        type="text/javascript"></script>
     </body>
 
 </html>

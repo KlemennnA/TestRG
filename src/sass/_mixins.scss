@@ -23,3 +23,31 @@
     background-repeat: no-repeat;
     background-image: $bgImage;
 }
+@mixin partnerLogo-img($logo){
+    display: inline-block;
+    width: 12vw;
+    height: 8vw;
+    min-width: 90px;
+    min-height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: $logo;
+}
+@mixin socialNetworkButton($icon){
+    cursor: pointer;
+    display: inline-block;
+    width: 3vw;
+    height: 3vw;
+    min-width: 30px;
+    min-height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: $icon;
+}
+@mixin contactSymbol($symbolImg){
+    &:before{
+        content: $symbolImg;
+        margin-right: 0.5rem;
+    }
+}

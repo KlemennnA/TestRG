@@ -1,6 +1,27 @@
 @import "./variables";
 @import "./mixins";
 
+.button-img-train{
+    @include button-img($imgTrain);
+}
+.button-img-ship{
+    @include button-img($imgShip);
+}
+.button-img-truck{
+    @include button-img($imgTruck);
+}
+.button-img-plane{
+    @include button-img($imgPlane);
+}
+.button-img-crane{
+    @include button-img($imgCrane);
+}
+.button-img-story{
+    @include button-img($imgStory);
+}
+.button-img-warehouse{
+    @include button-img($imgWarehouse);
+}
 .img-train{
     @include bigButton-img($imgTrain);
 }

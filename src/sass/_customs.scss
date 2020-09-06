@@ -24,10 +24,7 @@ p.p-2{
     z-index: 3;
 }
 .mt-5vw{
-    margin-top: -5vw;
-}
-.width70{
-    width:70vw;
+    margin-top: -6vw;
 }
 .height100p{
     height: 100%;
@@ -82,28 +79,14 @@ p.p-2{
     border-left: 1px solid;
     border-right: 1px solid;
 }
-.bigButtonsNavbar{
-    padding: 0 0 0 0;
-    width: fit-content;
-    margin-top: -5vw;
-    font-family: $font-family-text;
-    div{
-        display: block;
-        width: 10vw;
-        height: 10vw;
-        text-align: center;
-        background-color: $primary;
-        :hover{
-            background-color: $highlight;
-            cursor: pointer;
-        }
-    }
-}
 .card{
-    min-width: 10vw;
-    min-height: 10vw;
+    min-width: 12vw;
+    min-height: 12vw;
     cursor: pointer;
     background-color: $primary;
+    border: solid $gray-300;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0;
     &:hover{
         background-color: $highlight !important;
         .selectionArrow{
@@ -113,10 +96,14 @@ p.p-2{
     &-body{
         flex: 0 0 auto;
     }
+    p{
+        font-size: 0.5rem;
+    }
 }
 .selectionArrow{
     display: none;
     position: absolute;
+    bottom: -1vw;
     width: 2vw;
     height: 2vw;
     min-width: 2vw;
@@ -125,15 +112,7 @@ p.p-2{
     background-position: center;
     background-repeat: no-repeat;
     background-image: $imgArrow-small-white;
-    transform: rotate(-45deg) translate(30%,80%);
-}
-.bigButton{
-    height: 100%;
-    width: 100%;
-    span{
-        font-size: 0.75rem;
-        padding-top: 0.25rem;
-    }
+    transform: rotate(-45deg) translate(-10%,10%) scale(1.5);
 }
 .hoverArrow{
     content: url("../img/Layer\ 7\ copy\ 13w.png");
@@ -146,12 +125,6 @@ p.p-2{
     :hover{
         background-color: none;
     }
-}
-.bigButton:hover > .hoverArrow{
-    display: inline-block !important;
-}
-.hiddenBigButtonLinks{
-    display: none !important;
 }
 .containerCustom{
     margin-top: 1rem;
@@ -270,6 +243,7 @@ p.p-2{
     min-height: 500px;
 }
 .footer-h{
+    text-transform: uppercase;
     &::before{
         content: $imgArrow-small;
     }
@@ -283,17 +257,23 @@ p.p-2{
 .card-columns-contacts{
     @extend .card-columns;
     font-size: 0.85rem;
-    column-count: 1;
+    column-count: 2;
 }
 @include media-breakpoint-down(xs) {
-    .bigButtonsNavbar {
+    .buttonsContainer{
         display: none !important;
     }
-    .hiddenBigButtonLinks{
-        display: block !important;
+    .card-columns-contacts{
+        column-count: 1 !important;
     }
 }
 @include media-breakpoint-down(sm){
+    .smallNavLinks{
+        display: block !important;
+    }
+    .img-magGlass{
+        display: none !important;
+    }
     .happyGuyImg{
         float: left !important;
     }
@@ -325,20 +305,19 @@ p.p-2{
             margin-top: -1rem;
         }
     }
+    .smallNavLinks{
+        display: none !important;
+    }
+    .img-magGlass{
+        display: block !important;
+    }
 }
 @include media-breakpoint-up(md){
     .happyGuyImg{
         float: right !important;
     }
-}
-@include media-breakpoint-only(md){
-    .card-columns-contacts{
-        column-count: 3 !important;
-    }
-}
-@include media-breakpoint-only(sm){
-    .card-columns-contacts{
-        column-count: 3 !important;
+    .card p{
+        font-size: 0.7rem;
     }
 }
 @include media-breakpoint-down(lg) {
@@ -363,6 +342,12 @@ p.p-2{
     }
     .companyLogo-advantage{
         transform: translate(-25%,0) !important;
+    }
+    .card p{
+        font-size: 0.9rem;
+    }
+    .card-columns-contacts{
+        column-count: 1 !important;
     }
 }
 @include media-breakpoint-up(xl){

@@ -11,38 +11,52 @@
         <title>TestRG</title>
     </head>
     
-    <body onresize="positionAdvantagesGroup()" onload="positionAdvantagesGroup()">
+    <body onresize="positionAdvantagesGroup()" onload=" setContent(); positionAdvantagesGroup();">
         <nav class="navbar px-3 py-0 navbar-expand-sm navbar-dark fixed-top">
 <a class="navbar-brand p-0 ml-3" href="./index.html"><div class="companyLogo-navbar py-1"></div></a>
+
             <button
             class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavBar"
             aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+
                 </button>
                 <div class="collapse navbar-collapse" id="topNavBar">
                     <ul class="navbar-nav ml-auto">
-                        <li class="hiddenBigButtonLinks"> <a class="nav-link" href="./about.html"><span class="img-dropdown-train"></span> Lorem Ipsum</a>
+                        <li class="smallNavLinks"> <a class="nav-link" href="#"><span class="img-dropdown-train"></span><span id="smallButton1"></span></a>
+
                         </li>
-                        <li class="hiddenBigButtonLinks"> <a class="nav-link" href="./about.html"><span class="img-dropdown-ship"></span>Lorem Ipsum</a>
+                        <li class="smallNavLinks"> <a class="nav-link" href="#"><span class="img-dropdown-ship"></span><span id="smallButton2"></span></a>
+
                         </li>
-                        <li class="hiddenBigButtonLinks"> <a class="nav-link" href="./about.html"><span class="img-dropdown-truck"></span>Lorem Ipsum</a>
+                        <li class="smallNavLinks"> <a class="nav-link" href="#"><span class="img-dropdown-truck"></span><span id="smallButton3"></span></a>
+
                         </li>
-                        <li class="hiddenBigButtonLinks"> <a class="nav-link" href="./about.html"><span class="img-dropdown-plane"></span>Lorem Ipsum</a>
+                        <li class="smallNavLinks"> <a class="nav-link" href="#"><span class="img-dropdown-plane"></span><span id="smallButton4"></span></a>
+
                         </li>
-                        <li class="hiddenBigButtonLinks"> <a class="nav-link" href="./about.html"><span class="img-dropdown-crane"></span>Lorem Ipsum</a>
+                        <li class="smallNavLinks"> <a class="nav-link" href="#"><span class="img-dropdown-crane"></span><span id="smallButton5"></span></a>
+
                         </li>
-                        <li class="hiddenBigButtonLinks"> <a class="nav-link" href="./about.html"><span class="img-dropdown-story"></span>Lorem Ipsum</a>
+                        <li class="smallNavLinks"> <a class="nav-link" href="#"><span class="img-dropdown-story"></span><span id="smallButton6"></span></a>
+
                         </li>
-                        <li class="hiddenBigButtonLinks"> <a class="nav-link" href="./about.html"><span class="img-dropdown-warehouse"></span>Lorem Ipsum</a>
+                        <li class="smallNavLinks"> <a class="nav-link" href="#"><span class="img-dropdown-warehouse"></span><span id="smallButton7"></span></a>
+
                         </li>
                         <li class="nav-item active"> <a class="nav-link img-magGlass" href="./index.html"></a>
+
                         </li>
-                        <li class="nav-item"> <a class="nav-link" href="./index.html">O nas</a>
+                        <li class="nav-item"> <a id="aboutUs" class="nav-link" href="./index.html"></a>
+
                         </li>
-                        <li class="nav-item"> <a class="nav-link" href="./about.html">Novice</a>
+                        <li class="nav-item"> <a id="news" class="nav-link" href="#"></a>
+
                         </li>
-                        <li class="nav-item"> <a class="nav-link" href="./about.html">Kontakt</a>
+                        <li class="nav-item"> <a id="contacts" class="nav-link" href="#"></a>
+
                         </li>
-                        <li> <a class="nav-link" href="./about.html"><img src="../img/Layer 22 copy.png" alt="ENG"></a>
+                        <li> <a class="nav-link" href="#"><img src="../img/Layer 22 copy.png" alt="ENG"></a>
+
                         </li>
                     </ul>
                 </div>
@@ -50,29 +64,67 @@
         <div class="container-fluid d-flex justify-content-center align-items-center headerBackground">
             <div class="companyLogo-header"></div>
         </div>
-        <div class="container-fluid d-flex flex-row justify-content-center text-secondary mt-5vw">
-            <div class="card align-items-center justify-content-center">
+        <div class="container-fluid d-none d-sm-flex flex-row justify-content-center text-secondary mt-5vw buttonsContainer">
+            <div class="card align-items-center justify-content-center shadow-lg">
                 <div class="card-img-top my-1 button-img-train"></div>
-                <div class="card-body p-0">
-                    <p class="card-text my-1">Some quick</p>
+                <div class="card-body d-flex flex-column align-items-center p-0">
+                    <p id="button1" class="card-text my-1"></p>
+                    <div class="selectionArrow"></div>
+                </div>
+            </div>
+            <div class="card align-items-center justify-content-center shadow-lg">
+                <div class="card-img-top my-1 button-img-train"></div>
+                <div class="card-body d-flex flex-column align-items-center p-0">
+                    <p id="button2" class="card-text my-1"></p>
+                    <div class="selectionArrow"></div>
+                </div>
+            </div>
+            <div class="card align-items-center justify-content-center shadow-lg">
+                <div class="card-img-top my-1 button-img-train"></div>
+                <div class="card-body d-flex flex-column align-items-center p-0">
+                    <p id="button3" class="card-text my-1"></p>
+                    <div class="selectionArrow"></div>
+                </div>
+            </div>
+            <div class="card align-items-center justify-content-center shadow-lg">
+                <div class="card-img-top my-1 button-img-train"></div>
+                <div class="card-body d-flex flex-column align-items-center p-0">
+                    <p id="button4" class="card-text my-1"></p>
+                    <div class="selectionArrow"></div>
+                </div>
+            </div>
+            <div class="card align-items-center justify-content-center shadow-lg">
+                <div class="card-img-top my-1 button-img-train"></div>
+                <div class="card-body d-flex flex-column align-items-center p-0">
+                    <p id="button5" class="card-text my-1"></p>
+                    <div class="selectionArrow"></div>
+                </div>
+            </div>
+            <div class="card align-items-center justify-content-center shadow-lg">
+                <div class="card-img-top my-1 button-img-train"></div>
+                <div class="card-body d-flex flex-column align-items-center p-0">
+                    <p id="button6" class="card-text my-1"></p>
+                    <div class="selectionArrow"></div>
+                </div>
+            </div>
+            <div class="card align-items-center justify-content-center shadow-lg">
+                <div class="card-img-top my-1 button-img-train"></div>
+                <div class="card-body d-flex flex-column align-items-center p-0">
+                    <p id="button7" class="card-text my-1"></p>
                     <div class="selectionArrow"></div>
                 </div>
             </div>
         </div>
         <div class="container d-flex flex-column justify-content-center bg-white containerCustom">
-             <h1>Lorem ipsum dolor sit amet</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione optio
-                voluptatum corporis consectetur deserunt maiores molestiae totam autem
-                consequuntur tempora!</p>
+             <h1 id="title1"></h1>
+            <p id="subtitle1"></p>
         </div>
         <div class="container-fluid centerContentBackground">
             <div class="container containerCustom">
                 <div class="row centerRowCustom">
                     <div class="col-md-4 align-self-center">
-                         <h2>Vprašajte nas</h2>
-                        <p class="p-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum velit
-                            ut ad cumque impedit iusto, dolorum recusandae reiciendis labore quia veniam,
-                            esse saepe aspernatur repudiandae alias similique. Pariatur, minima ipsa.</p>
+                         <h2 id="leftColumnTitle"></h2>
+                        <p id="leftColumnText" class="p-1"></p>
                     </div>
                     <div class="col-md-8">
                         <div class="row height100p">
@@ -81,38 +133,39 @@
                             </div>
                             <div class="col-ms-6 align-self-end z-index-3">
                                 <nav>
-                                    <div class="nav nav-tabs" id="nav-tab" role="tablist"> <a class="nav-item nav-link active" id="nav-ponudba-tab" data-toggle="tab"
-                                        href="#nav-ponudba" role="tab" aria-controls="nav-ponudba" aria-selected="true">PONUDBA</a>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist"> <a class="nav-item nav-link active" id="tab1" data-toggle="tab" href="#nav-ponudba"
+                                        role="tab" aria-controls="nav-ponudba" aria-selected="true"><span></span></a>
                                         <a
-                                        class="nav-item nav-link" id="nav-sledite-tab" data-toggle="tab" href="#nav-sledite"
-                                        role="tab" aria-controls="nav-sledite" aria-selected="false">SLEDITE</a>
+                                        class="nav-item nav-link" id="tab2" data-toggle="tab" href="#nav-sledite"
+                                        role="tab" aria-controls="nav-sledite" aria-selected="false"></a>
                                     </div>
                                 </nav>
-                                <div class="tab-content" id="nav-tabContent">
+                                <div id="nav-tabContent" class="tab-content shadow">
                                     <div class="tab-pane fade show active" id="nav-ponudba" role="tabpanel"
                                     aria-labelledby="nav-ponudba-tab">
-                                        <p class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem doloribus
-                                            officia repudiandae, numquam quia ratione eos amet dolorem quos animi.</p>
-                                        <form
-                                        class="pl-3 pr-3 pb-2">
+                                        <p id="tab1text" class="p-2"></p>
+                                        <form class="pl-3 pr-3 pb-2">
                                             <div class="form-group">
-                                                <label for="startPoint" class="float-left">Od:</label>
+                                                <label id="input1Label" for="startPoint" class="float-left"></label>
                                                 <input type="email" class="form-control" id="startPoint" aria-describedby="emailHelp"
                                                 placeholder="npr. Ljubljana">
                                             </div>
                                             <div class="form-group">
-                                                <label for="endPoint" class="float-left">Do:</label>
+                                                <label id="input2Label" for="endPoint" class="float-left"></label>
                                                 <input type="password" class="form-control" id="endPoint" placeholder="npr. Koper">
                                             </div>
-                                            <button type="button" class="btn btn-highlight" onclick="pridobiPonudbo()">PRIDOBITE PONUDBO</button>
-                                            </form>
+                                            <button id="buttonOffer" type="button" class="btn btn-highlight" onclick="pridobiPonudbo()"></button>
+                                        </form>
                                     </div>
                                     <div class="tab-pane fade" id="nav-sledite" role="tabpanel" aria-labelledby="nav-sledite-tab">
-                                        <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
-                                            odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
-                                            odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
-                                            odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium,
-                                            odit.</p>
+                                        <p id="tab2text" class="p-2"></p>
+                                        <form class="pl-3 pr-3 pb-2">
+                                            <div class="form-group">
+                                                <label id="input3Label" for="endPoint" class="float-left"></label>
+                                                <input type="password" class="form-control" id="endPoint" placeholder="npr. LJ 55 555">
+                                            </div>
+                                            <button id="buttonTrack" type="button" class="btn btn-highlight" onclick=""></button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -123,9 +176,8 @@
         </div>
         <div class="container-fluid pt-3 d-flex flex-column justify-content-end bg-blueGradient z-index-2">
             <div class="container d-flex flex-column justify-content-center bg-transparent text-secondary containerCustom">
-                 <h1>Lorem ipsum dolor sit amet</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, illum
-                    aperiam natus vel recusandae ad commodi laboriosam eligendi minima aut.</p>
+                 <h1 id="title2"></h1>
+                <p id="subtitle2"></p>
             </div>
             <div id="Advantages" class="container-fluid p-0 d-md-flex align-items-end d-none"
             style="position: relative;margin: 0 0 0 0;">
@@ -139,9 +191,9 @@
                     <div class="container text-right text-md-left text-secondary advantages-arrow-right">
                         <img class="arrow-img-left z-index-1" src="../img/Layer 14 copy 2.png"></img>
                         <div class="advantage-container-text z-index-2">
-                             <h3>01</h3>
-                             <h4>VEČ KOT 50 LET TRADICIJE</h4>
-                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                             <h3 id="advantage1Title"></h3>
+                             <h4 id="advantage1Subtitle"></h4>
+                            <p-2 id="advantage1Text"></p-2>
                         </div>
                     </div>
                 </div>
@@ -149,9 +201,9 @@
                     <div class="container text-left text-md-left text-secondary advantages-arrow-left">
                         <img class="arrow-img-left z-index-1" src="../img/Layer 14 copy 2.png"></img>
                         <div class="advantage-container-text z-index-2">
-                             <h3>02</h3>
-                             <h4>HITRO IN ZANESLJIVO</h4>
-                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                             <h3 id="advantage2Title"></h3>
+                             <h4 id="advantage2Subtitle"></h4>
+                            <p-2 id="advantage2Text"></p-2>
                         </div>
                     </div>
                 </div>
@@ -159,9 +211,9 @@
                     <div class="container text-right text-md-right text-secondary advantages-arrow-right">
                         <img class="arrow-img-right z-index-1" src="../img/Layer 14 copy 2.png"></img>
                         <div class="advantage-container-text-right z-index-2">
-                             <h3>03</h3>
-                             <h4>PRILAGOJENE REŠITVE</h4>
-                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                             <h3 id="advantage3Title"></h3>
+                             <h4 id="advantage3Subtitle"></h4>
+                            <p-2 id="advantage3Text"></p-2>
                         </div>
                     </div>
                 </div>
@@ -169,9 +221,9 @@
                     <div class="container text-left text-md-right text-secondary advantages-arrow-left">
                         <img class="arrow-img-right z-index-1" src="../img/Layer 14 copy 2.png"></img>
                         <div class="advantage-container-text-right z-index-2">
-                             <h3>04</h3>
-                             <h4>LOGISTIKA A-Ž</h4>
-                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                             <h3 id="advantage4Title"></h3>
+                             <h4 id="advantage4Subtitle"></h4>
+                            <p-2 id="advantage4Text"></p-2>
                         </div>
                     </div>
                 </div>
@@ -179,36 +231,36 @@
             </div>
             <div class="container-fluid">
                 <div class="container d-flex flex-column d-md-none align-items-center justify-content-top">
-                    <div class="container text-right text-md-left text-secondary advantages-arrow-right">
+                    <div class="container text-right text-md-left text-secondary advantages-arrow-right mb-3">
                         <img class="arrow-img-left z-index-1" src="../img/Layer 14 copy 2.png"></img>
                         <div class="advantage-container-text z-index-2">
-                             <h3>01</h3>
-                             <h4>VEČ KOT 50 LET TRADICIJE</h4>
-                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                             <h3 id="smallAdvantage1Title"></h3>
+                             <h4 id="smallAdvantage1Subtitle"></h4>
+                            <p-2 id="smallAdvantage1Text"></p-2>
                         </div>
                     </div>
-                    <div class="container text-left text-md-left text-secondary advantages-arrow-left">
+                    <div class="container text-left text-md-left text-secondary advantages-arrow-left mb-3">
                         <img class="arrow-img-left z-index-1" src="../img/Layer 14 copy 2.png"></img>
                         <div class="advantage-container-text z-index-2">
-                             <h3>02</h3>
-                             <h4>HITRO IN ZANESLJIVO</h4>
-                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                             <h3 id="smallAdvantage2Title"></h3>
+                             <h4 id="smallAdvantage2Subtitle"></h4>
+                            <p-2 id="smallAdvantage2Text"></p-2>
                         </div>
                     </div>
-                    <div class="container text-right text-md-right text-secondary advantages-arrow-right">
+                    <div class="container text-right text-md-right text-secondary advantages-arrow-right mb-3">
                         <img class="arrow-img-right z-index-1" src="../img/Layer 14 copy 2.png"></img>
                         <div class="advantage-container-text-right z-index-2">
-                             <h3>03</h3>
-                             <h4>PRILAGOJENE REŠITVE</h4>
-                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                             <h3 id="smallAdvantage3Title"></h3>
+                             <h4 id="smallAdvantage3Subtitle"></h4>
+                            <p-2 id="smallAdvantage3Text"></p-2>
                         </div>
                     </div>
-                    <div class="container text-left text-md-right text-secondary advantages-arrow-left">
+                    <div class="container text-left text-md-right text-secondary advantages-arrow-left mb-3">
                         <img class="arrow-img-right z-index-1" src="../img/Layer 14 copy 2.png"></img>
                         <div class="advantage-container-text-right z-index-2">
-                             <h3>04</h3>
-                             <h4>LOGISTIKA A-Ž</h4>
-                            <p-2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, fuga.</p>
+                             <h3 id="smallAdvantage4Title"></h3>
+                             <h4 id="smallAdvantage4Subtitle"></h4>
+                            <p-2 id="smallAdvantage4Text"></p-2>
                         </div>
                     </div>
                 </div>
@@ -216,7 +268,7 @@
         </div>
         <div class="container-fluid d-flex flex-column align-items-center text-center pt-3 pb-3 bg-light">
             <div class="container-fluid d-flex flex-column justify-content-center bg-transparent text-primary">
-                 <h2>POSLOVNA ODLIČNOST</h2>
+                 <h2 id="title3"></h2>
                 <div class="container bg-transparent containerCustom"> <span class="container col-2 ml-1 mr-1 partnerLogo"></span> <span class="container col-2 ml-1 mr-1 partnerLogo"></span>
                     <span
                     class="container col-2 ml-1 mr-1 partnerLogo"></span> <span class="container col-2 ml-1 mr-1 partnerLogo"></span>
@@ -242,28 +294,28 @@
                 </div>
                 <div class="col-xs-5 pl-3 pr-3">
                     <row class="text-secondary">
-                         <h6 class="footer-h">NAŠE STORITVE</h6>
+                         <h6 id="footerLinksTitle" class="footer-h"></h6>
 
                         <ul class="list-unstyled card-columns-services">
-                            <li> <a href="#">Železna logistika</a>
+                            <li> <a id="footerLink1" href="#"></a>
 
                             </li>
-                            <li> <a href="#">Pomorska logistika</a>
+                            <li> <a id="footerLink2" href="#"></a>
 
                             </li>
-                            <li> <a href="#">Cestna logistika</a>
+                            <li> <a id="footerLink3" href="#"></a>
 
                             </li>
-                            <li> <a href="#">Letalska logistika</a>
+                            <li> <a id="footerLink4" href="#"></a>
 
                             </li>
-                            <li> <a href="#">Blagovne skupine</a>
+                            <li> <a id="footerLink5" href="#"></a>
 
                             </li>
-                            <li> <a href="#">Administrativne logistike</a>
+                            <li> <a id="footerLink6" href="#"></a>
 
                             </li>
-                            <li> <a href="#">Skladiščenje</a>
+                            <li> <a id="footerLink7" href="#"></a>
 
                             </li>
                         </ul>
@@ -271,16 +323,16 @@
                 </div>
                 <div class="col-xs-4 pl-1 pr-1">
                     <row class="text-secondary">
-                         <h6 class="footer-h text-left text-md-center text-lg-left">KONTAKT</h6>
+                         <h6 id="footerContacts" class="footer-h text-left text-md-center text-lg-left"></h6>
 
                         <ul class="list-unstyled card-columns-contacts">
-                            <li> <a class="contactLoc" href="#">Šmartinska 130,<br>SI-1000 Ljubljana</a>
+                            <li> <a id="address" class="contactLoc" href="#"></a>
 
                             </li>
-                            <li> <a class="contactPhone" href="#">+386 1 350 71 60</a>
+                            <li> <a id="phone" class="contactPhone" href="#"></a>
 
                             </li>
-                            <li> <a class="contactMail" href="#">info@companymail.si</a>
+                            <li> <a id="mail" class="contactMail" href="#"></a>
 
                             </li>
                         </ul>

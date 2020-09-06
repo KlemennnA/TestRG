@@ -8,7 +8,7 @@
     <link rel="icon" href="./img/icon.png" />
     <title>TestRG</title>
   </head>
-<body onresize="positionAdvantagesGroup()" onload="positionAdvantagesGroup()">
+<body onresize="positionAdvantagesGroup()" onload=" setContent(); positionAdvantagesGroup();">
 <nav class="navbar px-3 py-0 navbar-expand-sm navbar-dark fixed-top">
 <a class="navbar-brand p-0 ml-3" href="./index.html"><div class="companyLogo-navbar py-1"></div></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,42 +17,42 @@
 
 <div class="collapse navbar-collapse" id="topNavBar">
     <ul class="navbar-nav ml-auto">
-        <li class="hiddenBigButtonLinks">
-            <a class="nav-link" href="./about.html"><span class="img-dropdown-train"></span> Lorem Ipsum</a>
+        <li class="smallNavLinks">
+            <a class="nav-link" href="#"><span class="img-dropdown-train"></span><span id="smallButton1"></span></a>
         </li>
-        <li class="hiddenBigButtonLinks">
-            <a class="nav-link" href="./about.html"><span class="img-dropdown-ship"></span>Lorem Ipsum</a>
+        <li class="smallNavLinks">
+            <a class="nav-link" href="#"><span class="img-dropdown-ship"></span><span id="smallButton2"></span></a>
         </li>
-        <li class="hiddenBigButtonLinks">
-            <a class="nav-link" href="./about.html"><span class="img-dropdown-truck"></span>Lorem Ipsum</a>
+        <li class="smallNavLinks">
+            <a class="nav-link" href="#"><span class="img-dropdown-truck"></span><span id="smallButton3"></span></a>
         </li>
-        <li class="hiddenBigButtonLinks">
-            <a class="nav-link" href="./about.html"><span class="img-dropdown-plane"></span>Lorem Ipsum</a>
+        <li class="smallNavLinks">
+            <a class="nav-link" href="#"><span class="img-dropdown-plane"></span><span id="smallButton4"></span></a>
         </li>
-        <li class="hiddenBigButtonLinks">
-            <a class="nav-link" href="./about.html"><span class="img-dropdown-crane"></span>Lorem Ipsum</a>
+        <li class="smallNavLinks">
+            <a class="nav-link" href="#"><span class="img-dropdown-crane"></span><span id="smallButton5"></span></a>
         </li>
-        <li class="hiddenBigButtonLinks">
-            <a class="nav-link" href="./about.html"><span class="img-dropdown-story"></span>Lorem Ipsum</a>
+        <li class="smallNavLinks">
+            <a class="nav-link" href="#"><span class="img-dropdown-story"></span><span id="smallButton6"></span></a>
         </li>
-        <li class="hiddenBigButtonLinks">
-            <a class="nav-link" href="./about.html"><span class="img-dropdown-warehouse"></span>Lorem Ipsum</a>
+        <li class="smallNavLinks">
+            <a class="nav-link" href="#"><span class="img-dropdown-warehouse"></span><span id="smallButton7"></span></a>
         </li>
 
         <li class="nav-item active">
             <a class="nav-link img-magGlass" href="./index.html"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./index.html">O nas</a>
+            <a id="aboutUs" class="nav-link" href="./index.html"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./about.html">Novice</a>
+            <a id="news" class="nav-link" href="#"></a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./about.html">Kontakt</a>
+            <a id="contacts" class="nav-link" href="#"></a>
         </li>
         <li>
-            <a class="nav-link" href="./about.html"><img src="../img/Layer 22 copy.png" alt="ENG"></a>
+            <a class="nav-link" href="#"><img src="../img/Layer 22 copy.png" alt="ENG"></a>
         </li>   
     </ul>
 </div>
@@ -60,40 +60,54 @@
 <div class="container-fluid d-flex justify-content-center align-items-center headerBackground">
     <div class="companyLogo-header"></div>
 </div>
-<div class="container-fluid d-flex flex-row justify-content-center text-secondary bigButtonsNavbar">
-    <div class="border-left-right shadow-lg"><a href="#">
-        <span class="d-flex flex-column justify-content-center align-items-center bigButton">
-            <span class="img-train"></span>
-            <span>Lorem<br>ipsum</span>
-        </span></a></div>
-    <div class="border-left-right shadow-lg"><a href="#">
-        <span class="d-flex flex-column justify-content-center align-items-center bigButton">
-            <span class="img-ship"></span>
-            <span>Lorem<br>ipsum</span>
-        </span></a></div>
-    <div class="border-left-right shadow-lg"><a href="#">
-        <span class="d-flex flex-column justify-content-center align-items-center bigButton">
-            <span class="img-truck"></span>
-            <span>Lorem<br>ipsum</span>
-        </span></a></div>
-    <div class="border-left-right shadow-lg"><a href="#">
-        <span class="d-flex flex-column justify-content-center align-items-center bigButton">
-            <span class="img-plane"></span>
-            <span>Lorem<br>ipsum</span>
-        </span></a></div>
-    <div class="border-left-right shadow-lg"><a href="#">
-        <span class="d-flex flex-column justify-content-center align-items-center bigButton">
-            <span class="img-crane"></span>
-            <span>Lorem<br>ipsum</span>
-        </span></a></div>
-    <div class="border-left-right shadow-lg"><a href="#">
-        <span class="d-flex flex-column justify-content-center align-items-center bigButton">
-            <span class="img-story"></span>
-            <span>Lorem<br>ipsum</span>
-        </span></a></div>
-    <div class="border-left-right shadow-lg"><a href="#">
-        <span class="d-flex flex-column justify-content-center align-items-center bigButton">
-            <span class="img-warehouse"></span>
-            <span>Lorem<br>ipsum</span>
-        </span></a></div>
+<div class="container-fluid d-none d-sm-flex flex-row justify-content-center text-secondary mt-5vw buttonsContainer">
+    <div class="card align-items-center justify-content-center shadow-lg">
+        <div class="card-img-top my-1 button-img-train"></div>
+        <div class="card-body d-flex flex-column align-items-center p-0">
+            <p id="button1" class="card-text my-1"></p>
+            <div class="selectionArrow"></div>
+        </div>
+    </div>
+    <div class="card align-items-center justify-content-center shadow-lg">
+        <div class="card-img-top my-1 button-img-train"></div>
+        <div class="card-body d-flex flex-column align-items-center p-0">
+            <p id="button2" class="card-text my-1"></p>
+            <div class="selectionArrow"></div>
+        </div>
+    </div>
+    <div class="card align-items-center justify-content-center shadow-lg">
+        <div class="card-img-top my-1 button-img-train"></div>
+        <div class="card-body d-flex flex-column align-items-center p-0">
+            <p id="button3" class="card-text my-1"></p>
+            <div class="selectionArrow"></div>
+        </div>
+    </div>
+    <div class="card align-items-center justify-content-center shadow-lg">
+        <div class="card-img-top my-1 button-img-train"></div>
+        <div class="card-body d-flex flex-column align-items-center p-0">
+            <p id="button4" class="card-text my-1"></p>
+            <div class="selectionArrow"></div>
+        </div>
+    </div>
+    <div class="card align-items-center justify-content-center shadow-lg">
+        <div class="card-img-top my-1 button-img-train"></div>
+        <div class="card-body d-flex flex-column align-items-center p-0">
+            <p id="button5" class="card-text my-1"></p>
+            <div class="selectionArrow"></div>
+        </div>
+    </div>
+    <div class="card align-items-center justify-content-center shadow-lg">
+        <div class="card-img-top my-1 button-img-train"></div>
+        <div class="card-body d-flex flex-column align-items-center p-0">
+            <p id="button6" class="card-text my-1"></p>
+            <div class="selectionArrow"></div>
+        </div>
+    </div>
+    <div class="card align-items-center justify-content-center shadow-lg">
+        <div class="card-img-top my-1 button-img-train"></div>
+        <div class="card-body d-flex flex-column align-items-center p-0">
+            <p id="button7" class="card-text my-1"></p>
+            <div class="selectionArrow"></div>
+        </div>
+    </div>
 </div>

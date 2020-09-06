@@ -1,14 +1,14 @@
 <div class="container d-flex flex-column justify-content-center bg-white containerCustom">
-    <h1>Lorem ipsum dolor sit amet</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione optio voluptatum corporis consectetur deserunt maiores molestiae totam autem consequuntur tempora!</p>
+    <h1 id="title1"></h1>
+    <p id="subtitle1"></p>
 </div>
   
 <div class="container-fluid centerContentBackground">
   <div class="container containerCustom">
     <div class="row centerRowCustom">
       <div class="col-md-4 align-self-center">
-        <h2>Vprašajte nas</h2>
-        <p class="p-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum velit ut ad cumque impedit iusto, dolorum recusandae reiciendis labore quia veniam, esse saepe aspernatur repudiandae alias similique. Pariatur, minima ipsa.</p>
+        <h2 id="leftColumnTitle"></h2>
+        <p id="leftColumnText" class="p-1"></p>
       </div>
       <div class="col-md-8">
       <div class="row height100p">
@@ -18,29 +18,35 @@
         <div class="col-ms-6 align-self-end z-index-3">
           <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-ponudba-tab" data-toggle="tab" href="#nav-ponudba" role="tab" aria-controls="nav-ponudba" aria-selected="true">PONUDBA</a>
-              <a class="nav-item nav-link" id="nav-sledite-tab" data-toggle="tab" href="#nav-sledite" role="tab" aria-controls="nav-sledite" aria-selected="false">SLEDITE</a>
+              <a class="nav-item nav-link active" id="tab1" data-toggle="tab" href="#nav-ponudba" role="tab" aria-controls="nav-ponudba" aria-selected="true"><span></span></a>
+              <a class="nav-item nav-link" id="tab2" data-toggle="tab" href="#nav-sledite" role="tab" aria-controls="nav-sledite" aria-selected="false"></a>
             </div>
           </nav>
-          <div class="tab-content" id="nav-tabContent">
+          <div id="nav-tabContent" class="tab-content shadow">
             <div class="tab-pane fade show active" id="nav-ponudba" role="tabpanel" aria-labelledby="nav-ponudba-tab">
-              <p class="p-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem doloribus officia repudiandae, numquam quia ratione eos amet dolorem quos animi.</p>
+              <p id="tab1text" class="p-2"></p>
               <form class="pl-3 pr-3 pb-2">
                 <div class="form-group">
-                  <label for="startPoint" class="float-left">Od:</label>
+                  <label id="input1Label" for="startPoint" class="float-left"></label>
                   <input type="email" class="form-control" id="startPoint" aria-describedby="emailHelp" placeholder="npr. Ljubljana">
                 </div>
                 <div class="form-group">
-                  <label for="endPoint" class="float-left">Do:</label>
+                  <label id="input2Label" for="endPoint" class="float-left"></label>
                   <input type="password" class="form-control" id="endPoint" placeholder="npr. Koper">
                 </div>
-                  <button type="button" class="btn btn-highlight" onclick="pridobiPonudbo()">PRIDOBITE PONUDBO</button>
+                  <button id="buttonOffer" type="button" class="btn btn-highlight" onclick="pridobiPonudbo()"></button>
               </form>
             </div>
             <div class="tab-pane fade" id="nav-sledite" role="tabpanel" aria-labelledby="nav-sledite-tab">
-              <p class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, odit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, odit.
-
-              </p></div>
+              <p id="tab2text" class="p-2"></p>
+              <form class="pl-3 pr-3 pb-2">
+              <div class="form-group">
+                <label id="input3Label" for="endPoint" class="float-left"></label>
+                <input type="password" class="form-control" id="endPoint" placeholder="npr. LJ 55 555">
+              </div>
+                <button id="buttonTrack" type="button" class="btn btn-highlight" onclick=""></button>
+              </form>
+            </div>
             </div>
           </div>
         </div>

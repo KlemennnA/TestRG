@@ -190,7 +190,12 @@ var map = new google.maps.Map(document.getElementById("GoogleMap"),mapObject);
 marker.setMap(map);
 }
 function pridobiPonudbo() {
-    console.log("Pridobljena ponudba")
+    var startPoint = document.forms["OfferForm"]["startPoint"].value;
+    var endPoint = document.forms["OfferForm"]["endPoint"].value;
+
+    if(startPoint != "" && endPoint != ""){
+        console.log("Od: " + startPoint + " Do: " + endPoint);
+    }
 }
 
 window.addEventListener('resize', positionAdvantagesGroup);

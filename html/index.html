@@ -144,15 +144,16 @@
                                     <div class="tab-pane fade show active" id="nav-ponudba" role="tabpanel"
                                     aria-labelledby="nav-ponudba-tab">
                                         <p id="tab1text" class="p-2"></p>
-                                        <form class="pl-3 pr-3 pb-2">
+                                        <form name="OfferForm" class="pl-3 pr-3 pb-2">
                                             <div class="form-group">
                                                 <label id="input1Label" for="startPoint" class="float-left"></label>
-                                                <input type="email" class="form-control" id="startPoint" aria-describedby="emailHelp"
-                                                placeholder="npr. Ljubljana">
+                                                <input name="startPoint" type="text" class="form-control" id="startPoint"
+                                                aria-describedby="emailHelp" placeholder="npr. Ljubljana">
                                             </div>
                                             <div class="form-group">
                                                 <label id="input2Label" for="endPoint" class="float-left"></label>
-                                                <input type="password" class="form-control" id="endPoint" placeholder="npr. Koper">
+                                                <input name="endPoint" type="text" class="form-control" id="endPoint"
+                                                placeholder="npr. Koper">
                                             </div>
                                             <button id="buttonOffer" type="button" class="btn btn-highlight" onclick="pridobiPonudbo()"></button>
                                         </form>
@@ -162,7 +163,7 @@
                                         <form class="pl-3 pr-3 pb-2">
                                             <div class="form-group">
                                                 <label id="input3Label" for="endPoint" class="float-left"></label>
-                                                <input type="password" class="form-control" id="endPoint" placeholder="npr. LJ 55 555">
+                                                <input type="text" class="form-control" id="endPoint" placeholder="npr. LJ 55 555">
                                             </div>
                                             <button id="buttonTrack" type="button" class="btn btn-highlight" onclick=""></button>
                                         </form>
